@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarala&family=Sen:wght@700&display=swap');
+
+$main-container: 50%;
+$center: 0 auto;
+$fondo-body: black;
+$fondo-main: #FCFCFC;
+$fondo-div: #2BA1EA;
+$full: 100%;
+$logos: 2em;
+
+body{
+    background-color: $fondo-body;
+    
+}
+
+header{
+    h3{
+        font-family: 'Sen';
+        text-align: center;
+    }
+    div{
+        width: 40%;
+        margin: $center;
+        background-color: blue;
+        div{
+            float:left;
+            background-color: blue;
+            svg{
+                width: $logos;
+                height: $logos;
+                float:left;
+            }
+        }
+        div{
+            display: flex;
+            margin-left:2em;
+            align-items: center;
+            height: $full;
+            background-color: red;
+            p{                            
+                font-family: 'Sarala';
+            }
+        }               
+    }       
+    width: $main-container;
+    background-color:$fondo-main;
+    margin: $center;
+    padding: 1em;
+}
+
+div{
+    width: $full;
+    height: 2em;
+    background-color: $fondo-div;
+}
+main{
+    width: $main-container;
+    margin: $center;
+    background-color:$fondo-main;
+    height: $full;
+    padding: 1em;
+}
