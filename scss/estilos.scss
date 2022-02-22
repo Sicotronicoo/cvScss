@@ -2,15 +2,18 @@
 
 $main-container: 50%;
 $center: 0 auto;
-$fondo-body: black;
-$fondo-main: #FCFCFC;
-$fondo-div: #2BA1EA;
+$fondo-body: #3477DB;
+$fondo-main: #b2e2f2;
+$fondo-div: #3477DB;
 $full: 100%;
 $logos: 2em;
 
+@font-face {
+    font-family: OpenDyslexic-Regular;
+    src: url("font/OpenDyslexic-Regular.otf") format("opentype");
+  }
 body{
-    background-color: $fondo-body;
-    
+    background-color: $fondo-body;    
 }
 
 header{
@@ -19,28 +22,21 @@ header{
         text-align: center;
     }
     div{
-        width: 40%;
-        margin: $center;
-        background-color: blue;
-        div{
-            float:left;
-            background-color: blue;
+            background-color: $fondo-main;
+            width: $logos;
+            width: $logos;
+            margin-left: 2em;
             svg{
                 width: $logos;
                 height: $logos;
-                float:left;
+                float: left;
             }
-        }
-        div{
-            display: flex;
-            margin-left:2em;
-            align-items: center;
-            height: $full;
-            background-color: red;
-            p{                            
-                font-family: 'Sarala';
-            }
-        }               
+            
+        p{                            
+            font-family: 'Sarala';
+        }   
+
+        width: 80%;
     }       
     width: $main-container;
     background-color:$fondo-main;
@@ -54,9 +50,28 @@ div{
     background-color: $fondo-div;
 }
 main{
+    h4{
+        font-family: 'Sen';
+        background-color:white;
+        width: 100%;
+    }
+    h5{
+        font-family: 'Sen';
+        font-size: large;
+    }
+    article{
+        font-family: 'Sarala';
+        margin-left: 2em;
+
+    }
     width: $main-container;
     margin: $center;
     background-color:$fondo-main;
     height: $full;
     padding: 1em;
+}
+.dislexicos{
+    width: $main-container;
+    margin: $center;
+    height: $full;
 }
