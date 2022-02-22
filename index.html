@@ -5,59 +5,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="scss/estilos.css" />
     <title>CV Luis Martinez Holguin</title>
 </head>
 
-<body>
+<body id="content">
+    <script>
+        let click = 0;
+        function fuenteDislexicos() {
+            click++;
+            if (click === 1) {
+                let p = document.getElementsByName('datos');
+                for (let item of p) {
+                    item.setAttribute('style', "font-family:'Arial';");
+                    item.setAttribute('style', "font-size:1.5em;");
+                }
+                let partes = document.getElementsByName('partes');
+                for (let item of partes) {
+                    item.setAttribute('style', "font-weight: bold;");
+                    item.setAttribute('style', "font-size:2em;");
+                }
+                let partes2 = document.getElementsByName('partes2');
+                for (let item of partes2) {
+                    item.setAttribute('style', "font-size:1.5em;");
+                }
+                let h5t = document.getElementsByName('h5');
+                for (let item of h5t) {
+                    item.setAttribute('style', "font-weight: bold;");
+                    item.setAttribute('style', "font-size:2em;");
+                }
+                let lis = document.getElementsByTagName('li');
+                for (let item of lis) {
+                    item.setAttribute('style', "font-size:2em;");
+                }
+                let boton = document.getElementById('cambioFuente');
+                boton.innerText = 'Modo normal';
+
+            } else if (click === 2) {
+                let boton = document.getElementById('cambioFuente');
+                boton.innerText = 'Modo dislexicos';
+                window.location.reload(false); 
+            }
+        }
+    </script>
     <header>
         <article>
             <h3>LUIS MARTINEZ HOLGUIN 12/11/1994</h3>
         </article>
+
         <div>
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-house-fill"
-                    viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
-                    <path fill-rule="evenodd"
-                        d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
-                </svg>
-            </div>
-            <div>
-                <p>C/</p>
-            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                <path fill-rule="evenodd"
+                    d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+            </svg>
+            <p name="datos" style="font-family:'Calibri';">C/ Cavanilles Nº12 5ºC</p>
         </div>
-        <!--<div>
+
+        <div>
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-telephone-inbound"
                 viewBox="0 0 16 16">
                 <path
                     d="M15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0zm-12.2 1.182a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
             </svg>
-            <p> 639 56 76 03 </p>
+            <p name="datos"> 639 56 76 03 </p>
         </div>
         <div>
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                 <path
                     d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
             </svg>
-            <p>martinezholguinluis@gmail.com</p>
-        </div>-->
+            <p name="datos">martinezholguinluis@gmail.com</p>
+        </div>
+        <br>
+
     </header>
 
     <div>
     </div>
     <main>
         <section>
-            <h4>FORMACÓN ACADEMICA</h4>
-            <article>
+            <h4 name="partes">FORMACÓN ACADEMICA</h4>
+            <article name="partes2">
                 Educación secundaria obligatoria.
             </article>
-            <article>
+            <article name="partes2">
                 Tecnico en emergencias sanitarias.
             </article>
             <article>
-                <h5>Técnico en sistemas microinformáticos y redes</h5>
+                <h5 name="h5">Técnico en sistemas microinformáticos y redes</h5>
                 <ul>
                     <li>Seguridad informatica</li>
                     <li>Procesadores de texto</li>
@@ -68,7 +108,7 @@
                 </ul>
             </article>
             <article>
-                <h5>Master en diseño gráfico y web</h5>
+                <h5 name="h5">Master en diseño gráfico y web</h5>
                 <ul>
                     <li>Adobe Photoshop</li>
                     <li>Adobe InDesing</li>
@@ -79,21 +119,30 @@
             </article>
         </section>
         <section>
-            <h4>EXPERIENCIA PROFESIONAL</h4>
-            <article>370 horas de formación de la FP sistemas microinfomáticos y redes</article>
-            <article>370 horas de formacion de la FP sistemas de emergencia en Cruz Roja </article>
-            <article>Operario en la empresa Workout</article>
-            <article>Teleoperador en Konecta durante 6 meses</article>
-            <article>Técnico conductor de emergencias sanitarias en Ambulancias Tenoria e Hijos durante un año y medio
+            <h4 name="partes">EXPERIENCIA PROFESIONAL</h4>
+            <article name="partes2">370 horas de formación de la FP sistemas microinfomáticos y redes</article>
+            <article name="partes2">370 horas de formacion de la FP sistemas de emergencia en Cruz Roja </article>
+            <article name="partes2">Operario en la empresa Workout</article>
+            <article name="partes2">Teleoperador en Konecta durante 6 meses</article>
+            <article name="partes2">Técnico conductor de emergencias sanitarias en Ambulancias Tenorio e Hijos durante un año y medio
             </article>
         </section>
         <section>
-            <h4>OTROS DATOS DE INTERES</h4>
-            <article>Carnet de conducir desde el 21/02/2013</article>
-            <article>2º Puesto en el start-up en Burgos el 2015 con el proyecto Enfreta2</article>
-            <article>Ingles intermedio</article>
+            <h4 name="partes">OTROS DATOS DE INTERES</h4>
+            <article name="partes2">Carnet de conducir desde el 21/02/2013</article>
+            <article name="partes2">2º Puesto en el start-up en Burgos el 2015 con el proyecto Enfreta2</article>
+            <article name="partes2">Ingles intermedio</article>
         </section>
+ 
     </main>
+    <div id="btnDislexicos" class="dislexicos">
+        <button type="button" id="cambioFuente" class="btn btn-info" onclick="fuenteDislexicos()">Modo
+            dislexicos</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
